@@ -1,6 +1,7 @@
 import { use, useContext } from "react"
 import { MessageContext } from "../context/MessageContext"
 import { CoolComponent } from "./CoolComponent";
+import { Button } from "./Button";
 
 export const AwesomeComponent = () => {
     const {change} = useContext(MessageContext);
@@ -8,7 +9,7 @@ export const AwesomeComponent = () => {
         <>
             <h2>Awesome</h2>
             <CoolComponent/>
-            <button onClick={change}>Change</button>
+            <Button onClick={change}>Change Message</Button>
         </>
     )
 }
