@@ -13,10 +13,10 @@ function App(){
   const [theme, setTheme] = useState<ITheme>(themes.light);
 
   someText.change = () => {
-    setSomeText({
-      ...someText,
-      text: "memento mori",
-    });
+    setSomeText((prev) => ({
+      ...prev,
+      text: prev.text === "viva a vida" ? "memento mori" : "viva a vida",
+    }));
   };
   theme.toggle = () => {
     setTheme(theme.name === "light" ? themes.dark : themes.light);
